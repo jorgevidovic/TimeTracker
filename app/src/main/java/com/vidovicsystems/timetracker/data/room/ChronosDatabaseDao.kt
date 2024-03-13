@@ -18,7 +18,7 @@ interface ChronosDatabaseDao {
     @Query("SELECT * FROM chronos")
     fun getAllChronos(): Flow<List<Chronos>>
 
-    @Query("SELECT * FROM chronos WHERE chrono = :chrono")
+    @Query("SELECT * FROM chronos WHERE chrono = :title")
     fun getChronoByTitle(title: String): Flow<Chronos>
 
     @Query("SELECT * FROM chronos WHERE id = :id")
