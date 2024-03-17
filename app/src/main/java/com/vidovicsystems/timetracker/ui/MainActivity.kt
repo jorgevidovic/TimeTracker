@@ -1,4 +1,4 @@
-package com.vidovicsystems.timetracker
+package com.vidovicsystems.timetracker.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
