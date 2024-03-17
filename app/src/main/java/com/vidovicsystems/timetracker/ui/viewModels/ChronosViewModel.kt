@@ -1,4 +1,4 @@
-package com.vidovicsystems.timetracker.domain.viewModels
+package com.vidovicsystems.timetracker.ui.viewModels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
