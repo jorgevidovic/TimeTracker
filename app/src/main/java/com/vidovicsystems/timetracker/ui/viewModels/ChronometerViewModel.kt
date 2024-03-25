@@ -55,7 +55,7 @@ class ChronometerViewModel : ViewModel() {
         )
     }
 
-    fun Chronos() {
+    fun chronos() {
         if (state.activeChrono) {
             chronoJob?.cancel()
             chronoJob = viewModelScope.launch {
