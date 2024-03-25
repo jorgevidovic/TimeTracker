@@ -1,6 +1,7 @@
 package com.vidovicsystems.timetracker.ui.viewModels
 
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
@@ -17,7 +18,7 @@ class ChronometerViewModel : ViewModel() {
     var chronoJob by mutableStateOf<Job?>(null)
         private set
 
-    var time by mutableStateOf(0L)
+    var time by mutableLongStateOf(0L)
         private set
 
     fun onValue(value: String) {
@@ -45,7 +46,8 @@ class ChronometerViewModel : ViewModel() {
         state = state.copy(
             activeChrono = false,
             showSaveButton = false,
-            showTextField = false
+            showTextField = false,
+            title = ""
         )
     }
 

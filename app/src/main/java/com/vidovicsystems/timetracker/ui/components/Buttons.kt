@@ -52,6 +52,5 @@ fun CircleButton(
         modifier = Modifier.padding(horizontal = 15.dp)
     ) {
         Icon(imageVector = icon, contentDescription = null, modifier = Modifier.padding(24.dp))
-
     }
 }

@@ -18,7 +18,6 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
@@ -26,7 +25,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.vidovicsystems.timetracker.ui.components.CircleButton
-import com.vidovicsystems.timetracker.ui.components.FloatButton
 import com.vidovicsystems.timetracker.ui.components.MainIconButton
 import com.vidovicsystems.timetracker.ui.components.MainTitle
 import com.vidovicsystems.timetracker.ui.components.timeFormat
@@ -72,7 +70,7 @@ fun ContentAddView(
             .padding(it)
             .padding(top = 30.dp)
             .fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = CenterHorizontally
     ) {
         Text(
             text = timeFormat(time = chronometerViewModel.time),
