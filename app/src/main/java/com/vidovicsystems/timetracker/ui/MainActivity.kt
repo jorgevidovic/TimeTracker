@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import com.vidovicsystems.timetracker.ui.components.NavManager
 import com.vidovicsystems.timetracker.ui.theme.TimeTrackerTheme
 import com.vidovicsystems.timetracker.ui.viewModels.ChronometerViewModel
+import com.vidovicsystems.timetracker.ui.viewModels.ChronosViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -18,6 +19,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val chronometerViewModel : ChronometerViewModel by viewModels()
+        val chronosViewModel : ChronosViewModel by viewModels()
         setContent {
             TimeTrackerTheme {
                 // A surface container using the 'background' color from the theme
@@ -25,7 +27,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    NavManager(chronometerViewModel)
+                    NavManager(chronometerViewModel, chronosViewModel)
                 }
             }
         }

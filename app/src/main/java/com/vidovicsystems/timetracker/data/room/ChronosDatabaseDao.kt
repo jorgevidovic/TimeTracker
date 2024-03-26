@@ -14,6 +14,8 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface ChronosDatabaseDao {
 
+    // Interface -> Repository -> Viewmodel -> View
+
     //CRUD
     @Query("SELECT * FROM chronos")
     fun getAllChronos(): Flow<List<Chronos>>
